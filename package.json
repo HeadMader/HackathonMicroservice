@@ -1,0 +1,48 @@
+{
+  "name": "hackathonmicroservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc && node dist/app.js",
+    "serve": "node dist/app.js",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "dev": "npx concurrently \"npm run routes-watch\" \"nodemon src/app.ts\"",
+    "routes": "tsoa routes",
+    "routes-watch": "nodemon --watch src --ignore public/* --exec \"npm run routes\"",
+    "swagger": "tsoa spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.12.7",
+    "@types/passport": "^1.0.16",
+    "@types/passport-google-oauth20": "^2.0.14",
+    "@types/swagger-ui-express": "^4.1.6",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "swagger": "^0.0.1",
+    "swagger-ui-express": "^5.0.0",
+    "tsoa": "^6.2.1"
+  }
+}
