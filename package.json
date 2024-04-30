@@ -10,8 +10,7 @@
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "dev": "npx concurrently \"npm run routes-watch\" \"nodemon src/app.ts\"",
-    "routes": "tsoa routes",
-    "routes-watch": "nodemon --watch src --ignore public/* --exec \"npm run routes\"",
+    "routes-watch": "nodemon --watch src --ignore public/* ",
     "swagger": "tsoa spec"
   },
   "keywords": [],
@@ -34,13 +33,18 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/passport-jwt": "^4.0.1",
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
+    "mongoose": "^8.3.3",
     "morgan": "^1.10.0",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
+    "passport-jwt": "^4.0.1",
     "swagger": "^0.0.1",
     "swagger-ui-express": "^5.0.0",
     "tsoa": "^6.2.1"
